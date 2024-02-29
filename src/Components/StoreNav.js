@@ -1,4 +1,4 @@
-import {useState} from 'react'
+
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Aldilogo from './aldi-logo.png'
 import Costcologo from './costco-logo.png'
@@ -36,44 +36,44 @@ const ErrorLogo= Error
                 <Container>
                     <Nav>
                         <Nav.Item>
-                            <Nav.Link>
+                            <Link>
                                 <img src={InstaHome} alt="Instacart Logo Here" href="/"/>
-                            </Nav.Link>
+                            </Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link>
+                            <Link>
                                 <img src={AldiLogo} alt="Aldi Stores Logo" href="/aldi"/>
-                            </Nav.Link>
+                            </Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link>
+                            <Link>
                                 <img src={CostcoLogo} alt="Costco Wholesale Logo" href="/costco"/>
-                            </Nav.Link>
+                            </Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link>
+                            <Link>
                                 <img src={HebLogo} alt="HEB Logo" href="/heb"/>
-                            </Nav.Link>
+                            </Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link>
+                            <Link>
                                 <img src={KrogerLogo} alt="Kroger Logo" href="/kroger" />
-                            </Nav.Link>
+                            </Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link>
+                            <Link>
                             <img src={SamsLogo} alt="Sams Club Logo" href="/sams" />
-                            </Nav.Link>
+                            </Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link>
+                            <Link>
                             <img src={SproutsLogo} alt="Sprouts Market Logo" href="/sprouts" />
-                            </Nav.Link>
+                            </Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link>
+                            <Link>
                             <img src={ErrorLogo} alt="Error" href="/*" />
-                            </Nav.Link>
+                            </Link>
                         </Nav.Item>
                     </Nav>
                 </Container>
@@ -86,7 +86,7 @@ const ErrorLogo= Error
                     <Route path="/kroger" element={<Kroger/>}/>
                     <Route path="/samsclub" element={<SamsClub/>}/>
                     <Route path="/sprouts" element={<Sprouts/>}/>
-                    <Route path="*" element={<Error/>}/>
+                    <Route path="*" element={<ErrorComponent/>}/>
                 </Routes>
             </Router>
 

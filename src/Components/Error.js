@@ -2,7 +2,7 @@ import Errorlogo from './error-logo.png'
 
 
 
-function clickSamsLink (){
+function ErrorComponent (){
     const ErrorLogo= Errorlogo
 
     return (
@@ -15,4 +15,4 @@ function clickSamsLink (){
   
 }
 
-export default clickSamsLink
+export default ErrorComponent
