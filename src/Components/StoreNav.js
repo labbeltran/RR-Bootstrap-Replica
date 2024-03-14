@@ -1,3 +1,8 @@
+import Image from 'react-bootstrap/Image'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Aldilogo from './aldi-logo.png'
@@ -8,7 +13,7 @@ import Samslogo from './Sams-Club-Logo.png'
 import Sproutslogo from './sprouts-logo.png'
 import Instahome from './insta-logo.png'
 import Nav from 'react-bootstrap/Nav'
-import Container from 'react-bootstrap/Container'
+// import Container from 'react-bootstrap/Container'
 import Error from './ErrorLogo.png'
 
 import Aldi from './Aldi';
@@ -20,7 +25,7 @@ import Sprouts from './Sprouts';
 import Home from './Home'
 import ErrorComponent from './Error'
 
-function StoreNav(){
+const StoreNav = () =>{
 const InstaHome = Instahome
 const AldiLogo = Aldilogo
 const CostcoLogo = Costcologo
@@ -31,9 +36,10 @@ const SproutsLogo= Sproutslogo
 const ErrorLogo= Error
 
     return(
-        <div>
+        <div style={{margin:"auto"}}>
+            <h2>Browse your favorite store in town!</h2>
             <Router>
-                <Container>
+                <Container style={{marginTop:"40px", textAlign:"center"}}>
                     <Nav>
                         <Nav.Item>
                             <Link>
@@ -92,6 +98,47 @@ const ErrorLogo= Error
 
         </div>
     )
+
+    export default function StoreListings() {
+        return (
+            <div style={{ margin: "auto" }}>
+                <h2>Browse stores in Houston</h2>
+    <Container style={{ marginTop: "40px", textAlign: "center" }}>
+        <Row style={{ borderBottom: "1px solid #E8E9EB", display: "flex", justifyContent: "space-evenly"}} >
+            <Row>
+                <Col xs=".5" >
+                    <Image src={AldiLogo} roundedCircle />
+                </Col>
+                <Col>
+                    <h5 style={{ fontWeight: "bold" }}>ALDI</h5>
+                    <p>Delivery * Pickup</p>
+                </Col>
+            </Row>
+            <Col sm="1"></Col>
+            <Row >
+                <Col xs=".5">
+                    <Image src={SproutsLogo} roundedCircle />
+                </Col>
+                <Col>
+                    <h5 style={{ fontWeight: "bold" }}>Sprouts Farmers Market</h5>
+                    <p>Delivery * Pickup</p>
+                </Col>
+            </Row>
+            <Col sm="1"></Col>
+            <Row >
+                <Col xs=".5" >
+                    <Image src={KrogerLogo} roundedCircle />
+                </Col>
+                <Col md="6">
+                    <h5 style={{ fontWeight: "bold" }}>Kroger</h5>
+                    <p>Delivery</p>
+                </Col>
+            </Row>
+        </Row>
+    </Container>
+            </div >
+        )
+    }
 }
 
 export default StoreNav
